@@ -6,15 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build:ui": "@powershell Remove-Item -Recurse -Force dist && cd ../full_stack_23/Part_2/Exercise_app && npm run build && @powershell Copy-Item dist -Recurse ../../../fs_23_backend"
   },
   "author": "Piotr Maj",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "moment": "^2.29.4",
+    "mongoose": "^8.2.0",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
